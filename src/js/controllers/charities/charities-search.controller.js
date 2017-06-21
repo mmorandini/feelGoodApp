@@ -10,7 +10,7 @@ function CharitySearchCtrl($http) {
   vm.charitySearch = () => {
     $http({
       method: 'GET',
-      url: `http://api.justgiving.com/7f6218b2/v1/charity/search?q=${vm.charityFind}&pageSize=10`
+      url: `https://api.justgiving.com/7f6218b2/v1/charity/search?q=${vm.charityFind}&pageSize=10`
     })
     .then(data => {
       vm.charities = data.data.charitySearchResults;
@@ -21,7 +21,7 @@ function CharitySearchCtrl($http) {
   function getCharity(charity) {
     $http({
       method: 'GET',
-      url: `http://api.justgiving.com/7f6218b2/v1/charity/${charity}`
+      url: `https://api.justgiving.com/7f6218b2/v1/charity/${charity}`
     })
     .then(data => {
       vm.charity = data.data;
