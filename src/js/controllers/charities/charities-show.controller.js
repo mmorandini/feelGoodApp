@@ -19,7 +19,7 @@ function CharityShowCtrl($stateParams, Charity, CurrentUserService, $http, $stat
     if($stateParams.id.length < 8) {
       $http({
         method: 'GET',
-        url: `http://api.justgiving.com/7f6218b2/v1/charity/${$stateParams.id}`
+        url: `https://api.justgiving.com/7f6218b2/v1/charity/${$stateParams.id}`
       })
       .then(data => {
         vm.charity = data.data;
