@@ -25,7 +25,7 @@ function googleMap($window, $http, $timeout, API){
 
       function geocode(task){
         $http
-        .get(`http://maps.googleapis.com/maps/api/geocode/json?&address=${task.location.postcode}`)
+        .get(`https://maps.googleapis.com/maps/api/geocode/json?&address=${task.location.postcode}`)
         .then(data => {
           var coords = (data.data.results[0].geometry.location);
           const marker = new google.maps.Marker({
