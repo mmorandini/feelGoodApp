@@ -13,7 +13,8 @@ function LoginCtrl(User, CurrentUserService, $state) {
       .then(() => {
         CurrentUserService.getUser();
         if(vm.user){
-          $state.go('tasksIndex');
+          console.log(vm.user);
+          $state.go('dashboard');
         }
       }, err => {
         console.log('LoginCtrl error: ', err);

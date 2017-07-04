@@ -63,13 +63,13 @@ a, button{
 .nav-link{
   font-size: 1em;
   padding: 20px;
-  &:hover{
-    background: rgba(255,255,255,0.2);
-  }
 }
 .assigned {
   color: green;
 }
 .requested {
   color: red;
+}
+.hearts{
+  color: $cherry;
 }
